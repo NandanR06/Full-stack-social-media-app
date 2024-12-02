@@ -1,0 +1,14 @@
+.left-bar-friends{
+    display: flex;
+    align-items: center;
+   
+ }
+ 
+ .left-bar-friend-img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+ }

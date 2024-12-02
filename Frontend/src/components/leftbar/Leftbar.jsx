@@ -9,8 +9,9 @@ import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolIcon from '@mui/icons-material/School';
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import ChatIcon from '@mui/icons-material/Chat';
-import image1 from "../../assets/person/2.jpeg"
 import image3 from "../../assets/person/3.jpeg"
+import Closefriends from '../closeFriends/Closefriends';
+import { Users } from '../post/dummyData';
 
 
 export default function Leftbar() {
@@ -58,38 +59,7 @@ export default function Leftbar() {
         <button className='left-bar-btn'>Show more</button>
         <hr  className='left-bar-hr'/>
         <ul className="left-bar-friend-list">
-          <li className="left-bar-friends">
-            <img src={image1} className='left-bar-friend-img' alt="" />
-            <span>Nandan Raghu</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image3} className='left-bar-friend-img' alt="" />
-            <span>Nandan Raghu</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image1} className='left-bar-friend-img' alt="" />
-            <span>Nandan Raghu</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image3} className='left-bar-friend-img' alt="" />
-            <span> Raghu</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image1} className='left-bar-friend-img' alt="" />
-            <span>Nandan </span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image3} className='left-bar-friend-img' alt="" />
-            <span>sharadha</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image1} className='left-bar-friend-img' alt="" />
-            <span>sharadha</span>
-          </li>
-          <li className="left-bar-friends">
-            <img src={image1} className='left-bar-friend-img' alt="" />
-            <span>sharadha</span>
-          </li>
+          {Users.map(u=>(<Closefriends key={u.id} user = {u}/>))}
         </ul>
       </div>
     </div>
