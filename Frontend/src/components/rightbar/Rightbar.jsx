@@ -15,7 +15,7 @@ import friend6 from "../../assets/person/6.jpeg"
 import { Users } from "../../components/post/dummyData"
 
 
-export default function Rightbar() {
+export default function Rightbar({profile}) {
 
 
   const HomePage = () => {
@@ -100,8 +100,9 @@ export default function Rightbar() {
   return (
     <div className='right'>
       <div className="right-bar-wrapper">
-        <Profile />
-        {/* <HomePage/> */}
+
+        {profile?<Profile/>:<HomePage/>}
+        
       </div>
     </div>
   )
