@@ -85,9 +85,9 @@ router.get('/:id', async (req, res) => {
 
 //get timeline
 
-router.get('/timeline/all', async (req, res) => {
+router.get('/timeline/:userID', async (req, res) => {
     try {
-        const createUser = await User.findById(req.body.userID);
+        const createUser = await User.findById(req.params.userID);
         const userPost = await post.find({ userID: createUser._id });
         const friendPost = await Promise.all(
             createUser.following.map(friendId => (

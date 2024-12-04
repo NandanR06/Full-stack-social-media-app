@@ -16,6 +16,8 @@ import { Users } from "../../components/post/dummyData"
 
 
 export default function Rightbar({profile}) {
+  const pf= import.meta.env.VITE_APP_URL
+
 
 
   const HomePage = () => {

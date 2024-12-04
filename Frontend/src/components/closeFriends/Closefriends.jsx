@@ -3,10 +3,13 @@ import "./Closefriends.css"
 
 
 export default function Closefriends({user}) {
+  const pf= import.meta.env.VITE_APP_URL
+  
+  
   return (
     <div>
       <li className="left-bar-friends">
-            <img src={user.profilePicture} className='left-bar-friend-img' alt="" />
+            <img src={pf + user.profilePicture} className='left-bar-friend-img' alt="" />
             <span>{user.username}</span>
           </li>
     </div>

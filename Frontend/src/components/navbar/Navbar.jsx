@@ -5,12 +5,13 @@ import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import image from "../../assets/person/1.jpeg"
 import "./Navbar.css"
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <div className='navbar'>
       <div className="nav-left">
-        <span className="logo">ReadNote</span>
+        <Link to={"/"} style={{textDecoration:"none"}}><span className="logo">ReadNote</span></Link>
       </div>
       <div className="nav-center">
         <SearchIcon className='search'/>
