@@ -23,8 +23,6 @@ export default function Feed() {
     fetchPost();
   }, []);
   
-  
-
   return (
     <div className='feed'>
       <div className="feed-wrapper">
