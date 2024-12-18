@@ -11,7 +11,6 @@ import { format } from "timeago.js"
 import { Link } from 'react-router-dom';
 
 
-
 export default function Post({ post }) {
 
     const pf = import.meta.env.VITE_APP_URL
@@ -22,7 +21,7 @@ export default function Post({ post }) {
 
     useEffect(() => {
         const fetchPost = async () => {
-            await axios.get(`${url}/api/user/${post.userID}`)
+            await axios.get(`${url}/api/user?userID=${post.userID}`)
                 .then(res => {
                     setUser(res.data);
                 }).catch(err => {
@@ -38,7 +37,7 @@ export default function Post({ post }) {
         setIsLike(!isLike)
 
     }
-    const data = Users.filter(u => (u.id === post.userId))
+    // const data = Users.filter(u => (u.id === post.userId))
     return (
         <div className='post'>
             <div className="post-wrapper">

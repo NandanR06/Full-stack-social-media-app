@@ -101,4 +101,16 @@ router.get('/timeline/:userID', async (req, res) => {
 
     }
 })
+
+//get users post
+router.get("/profile/:username",async (req,res) => {
+    try {
+        const user = await User.findOne({userName:req.params.username});
+        const info = await post.find({userID : user._id});
+        res.status(200).json(info)
+    } catch (error) {
+        return res.status(500).json(error.message)
+
+    }
+})
 export default router;

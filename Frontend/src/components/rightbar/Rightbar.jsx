@@ -15,7 +15,7 @@ import friend6 from "../../assets/person/6.jpeg"
 import { Users } from "../../components/post/dummyData"
 
 
-export default function Rightbar({profile}) {
+export default function Rightbar({user}) {
   const pf= import.meta.env.VITE_APP_URL
 
 
@@ -43,15 +43,15 @@ export default function Rightbar({profile}) {
         <div className="right-bar-info">
           <div className="right-bar-info-item">
           <span className="right-bar-info-key">City :</span>
-          <span className="right-bar-info-value">Bangaluru</span>
+          <span className="right-bar-info-value">{user.city}</span>
         </div>
         <div className="right-bar-info-item">
           <span className="right-bar-info-key">From :</span>
-          <span className="right-bar-info-value">j p nagar</span>
+          <span className="right-bar-info-value">{user.from}</span>
         </div>
         <div className="right-bar-info-item">
           <span className="right-bar-info-key">Relationship:</span>
-          <span className="right-bar-info-value">single</span>
+          <span className="right-bar-info-value">{user.relationship === 1 ?"Single":user.relationship === 2? "Married" :"" }</span>
         </div>
         </div>
 
@@ -103,7 +103,7 @@ export default function Rightbar({profile}) {
     <div className='right'>
       <div className="right-bar-wrapper">
 
-        {profile?<Profile/>:<HomePage/>}
+        {user?<Profile/>:<HomePage/>}
         
       </div>
     </div>

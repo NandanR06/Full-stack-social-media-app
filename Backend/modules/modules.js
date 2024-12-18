@@ -42,7 +42,6 @@ const structure = new mongoose.Schema({
     },
     desc:{
         type:String,
-        max:50
     },
     city:{
         type:String,
