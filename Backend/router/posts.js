@@ -5,13 +5,17 @@ import User from "../modules/modules.js"
 const router = Router();
 
 //create a post
-router.post("/", async (req, res) => {
-    const data = new post(req.body);
 
+
+
+
+
+router.post("/" , async (req, res) => {
+
+    const data = new post(req.body);
     try {
         const save = await data.save();
         res.status(201).json(save);
-
     } catch (error) {
         res.status(500).json(error)
     }
@@ -107,8 +111,13 @@ router.get("/profile/:username",async (req,res) => {
     try {
         const user = await User.findOne({userName:req.params.username});
         const info = await post.find({userID : user._id});
-        res.status(200).json(info)
+       const pos  = await post.find()
+       console.log(pos) 
+        res.status(200).json(pos)
+
     } catch (error) {
+        console.log(error);
+        
         return res.status(500).json(error.message)
 
     }

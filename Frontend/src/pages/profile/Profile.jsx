@@ -40,8 +40,8 @@ return (
       <div className="profile-right">
         <div className="profile-right-top">
           <div className="profile-cover">
-            <img src={user.coverPicture || `${pf}cover.jpg` } alt="" className="profile-cover-img" />
-            <img src={user.profilePicture || `${pf}profile.webp` } alt="" className="profile-user-img" />
+            <img src={user.coverPicture ?pf + user.coverPicture :pf +'cover.jpg' } alt="cover Image " className="profile-cover-img" />
+            <img src={user.profilePicture ? pf + user.profilePicture :`${pf}profile.webp` } alt="profile" className="profile-user-img" />
           </div>
           <div className="profile-info">
             <h4 className="profile-info-Name">{user.userName}</h4>

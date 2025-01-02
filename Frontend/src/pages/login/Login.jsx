@@ -4,6 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import "./Login.css";
 import axios from "axios";
 import AuthContext from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 export default function Login() {
   const email = useRef();
   const password = useRef();
@@ -83,10 +84,13 @@ export default function Login() {
               {isFetching ?<CircularProgress color="white" size="25px" />: "Log In"}
             </button>
             <span className="login-forgot">Forgot password?</span>
+            <Link to={'/register'}>
             <button className="login-register-button">
             {isFetching ?<CircularProgress color="white" size="25px" />: "Create a New Account"}
               
             </button>
+            </Link>
+           
           </form>
         </div>
       </div>

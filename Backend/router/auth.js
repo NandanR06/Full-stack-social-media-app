@@ -11,17 +11,7 @@ router.post('/register', async (req, res) => {
         const hashpassword = await bcrypt.hash(req.body.password, 10);
         //uploding the data to database
 
-        const data = new user({  userName: req.body.userName,
-            email: req.body.email,
-            password: hashpassword,
-            profilePicture:req.body.profilePicture,
-            coverPicture:req.body.coverPicture,
-            followers:req.body.followers,
-            following:req.body.following,
-            desc:req.body.desc,
-            city:req.body.city,
-            from:req.body.from,
-            relationship:req.body.relationship});
+        const data = new user({...req.body, password : hashpassword});
         const save = await data.save();
         res.status(201).json(save);
 

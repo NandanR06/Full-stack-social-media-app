@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import "./Register.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function Register() {
   const user = useRef();
   const password = useRef();
@@ -77,9 +78,13 @@ export default function Register() {
             <button className="register-button" type="submit">
               Sign Up
             </button>
+
+            <Link to={'/login'}>
             <button className="register-register-button">
               Log into Account
             </button>
+            </Link>
+            
           </form>
         </div>
       </div>

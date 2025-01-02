@@ -18,11 +18,14 @@ export default function Post({ post }) {
   const [isLike, setIsLike] = useState(false);
   const [user, setUser] = useState({});
   const { user: currentUser } = useContext(AuthContext);
+
   useEffect(() => {
     const fetchPost = async () => {
       await axios
         .get(`${url}/api/user?userID=${post.userID}`)
         .then((res) => {
+          console.log(res.data);
+          
           setUser(res.data);
         })
         .catch((err) => {
@@ -41,7 +44,9 @@ export default function Post({ post }) {
       await axios.put(`${url}/api/posts/${post._id}/like`, {
         userID: currentUser._id,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
     setLike(isLike ? like - 1 : like + 1);
     setIsLike(!isLike);
   };
@@ -52,7 +57,8 @@ export default function Post({ post }) {
         <div className="post-top">
           <div className="post-top-left">
             <Link to={`/profile/${user.userName}`}>
-              <img
+              <img  
+                  crossorigin="anonymous"
                 src={user.profilePicture || `${pf}profile.webp`}
                 alt=""
                 className="post-profile"

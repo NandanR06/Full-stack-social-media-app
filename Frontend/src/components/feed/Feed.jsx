@@ -19,7 +19,7 @@ export default function Feed({userName}) {
       if(userName){
         await axios.get(`${url}/api/posts/profile/${userName}`)
         .then(res => {
-          setPosts(res.data);  
+          setPosts(res.data.sort((a,b)=>new Date(b.createdAt) - new Date(a.createdAt)));  
         }).catch(err => {
           console.log(err.message);
         })
@@ -27,7 +27,7 @@ export default function Feed({userName}) {
        else{
         await axios.get(`${url}/api/posts/timeline/${user._id}`)
         .then(res => {
-          setPosts(res.data);  
+          setPosts(res.data.sort((a,b)=>{new Date(b.createdAt) - new Date(a.createdAt)}));  
         }).catch(err => {
           console.log(err.message);
         })
