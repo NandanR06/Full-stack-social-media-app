@@ -46,7 +46,7 @@ Welcome to the **Social Media App** repository! This is a MERN stack-based socia
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NandanR06/social-media-app.git
+   git clone https://github.com/NandanR06/Full-stack-social-media-app.git
    cd social-media-app
    ```
 
