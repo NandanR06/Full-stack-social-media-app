@@ -94,8 +94,4 @@ Contributions are welcome! Please follow the guidelines:
 4. Submit a pull request.
 
 
-## Contact
 
-- **Email**: [nandanr7284@gmail.com](mailto:nandanr7284@gmail.com)
-- **LinkedIn**: [Nandan R](https://www.linkedin.com/in/nandan-r-489480273/)
-- **GitHub**: [NandanR06](https://github.com/NandanR06)
