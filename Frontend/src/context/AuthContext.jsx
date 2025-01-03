@@ -19,7 +19,7 @@ const data =
 
 
 const INITIAL_STATE = {
-  user: null,
+  user: data,
   isFetching: false,
   error: false,
 };
