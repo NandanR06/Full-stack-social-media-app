@@ -26,19 +26,21 @@ Welcome to the **Social Media App** repository! This is a MERN stack-based socia
 
 ## Screenshots
 
-### 1. Home Page
-![Home Page](./images/homepage.png)
+### 1. Register Page
+![Home Page](./Frontend/src/assets/register.png)
 
-### 2. User Profile
-![User Profile](./images/user_profile.png)
+### 2. Login Page
+![User Profile](./Frontend/src/assets/login.png)
 
-### 3. Follow/Unfollow Feature
-![Follow Feature](./images/follow_feature.png)
+### 3. Home Page
+![Follow Feature](./Frontend/src/assets/home.png)
 
-### 4. Like/Dislike Feature
-![Like Feature](./images/like_feature.png)
+### 4. Profile Page
+![Like Feature](./Frontend/src/assets/profile.png)
 
-> Place all the images inside a folder named `images` in the root of your repository.
+### 5.Post Page
+![Like Feature](./Frontend/src/assets/post.png)
+
 
 ## How to Run Locally
 
