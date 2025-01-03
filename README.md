@@ -52,8 +52,8 @@ Welcome to the **Social Media App** repository! This is a MERN stack-based socia
 
 2. Install dependencies:
    ```bash
-   npm install
-   cd  frontend && npm install
+    cd backend && npm install
+    cd frontend && npm install
    ```
 
 3. Run the application:
@@ -62,7 +62,7 @@ Welcome to the **Social Media App** repository! This is a MERN stack-based socia
    npm start
 
    # Start the frontend
-   cd backend && npm start
+   npm run dev
    ```
 
 4. Access the application in your browser at `http://localhost:5000`.
